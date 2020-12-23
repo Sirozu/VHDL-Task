@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sat Nov 07 15:08:39 2020" VIVADOVERSION="2015.3">
+
+  <SYSTEMINFO ARCH="artix7" BOARD="em.avnet.com:7a50t:part0:1.0" DEVICE="7a50t" NAME="design_1" PACKAGE="ftg256" SPEEDGRADE="-1"/>
+
+  <EXTERNALPORTS>
+    <PORT CLKFREQUENCY="100000000" DIR="I" NAME="CLK" SIGIS="clk" SIGNAME="External_Ports_CLK">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="UART_0" PORT="CLK"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="UART_RXD" SIGIS="undef" SIGNAME="External_Ports_UART_RXD">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="UART_0" PORT="UART_RXD"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="UART_TXD" SIGIS="undef" SIGNAME="UART_0_UART_TXD">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="UART_0" PORT="UART_TXD"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="RST" SIGIS="rst" SIGNAME="External_Ports_RST">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="UART_0" PORT="RST"/>
+      </CONNECTIONS>
+    </PORT>
+  </EXTERNALPORTS>
+
+  <EXTERNALINTERFACES/>
+
+  <MODULES>
+    <MODULE FULLNAME="/UART_0" HWVERSION="1.0" INSTANCE="UART_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="UART" VLNV="xilinx.com:user:UART:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="CLK_FREQ" VALUE="200000000"/>
+        <PARAMETER NAME="BAUD_RATE" VALUE="115200"/>
+        <PARAMETER NAME="PARITY_BIT" VALUE="none"/>
+        <PARAMETER NAME="USE_DEBOUNCER" VALUE="True"/>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_UART_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="100000000" DIR="I" NAME="CLK" SIGIS="clk" SIGNAME="External_Ports_CLK">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="CLK"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="RST" SIGIS="rst" SIGNAME="External_Ports_RST">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="RST"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="UART_TXD" SIGIS="undef" SIGNAME="UART_0_UART_TXD">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="UART_TXD"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="UART_RXD" SIGIS="undef" SIGNAME="External_Ports_UART_RXD">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="UART_RXD"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="DIN" RIGHT="0" SIGIS="undef" SIGNAME="UART_0_DOUT">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="UART_0" PORT="DOUT"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="DIN_VLD" SIGIS="undef" SIGNAME="UART_0_DOUT_VLD">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="UART_0" PORT="DOUT_VLD"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="DIN_RDY" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="7" NAME="DOUT" RIGHT="0" SIGIS="undef" SIGNAME="UART_0_DOUT">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="UART_0" PORT="DIN"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="DOUT_VLD" SIGIS="undef" SIGNAME="UART_0_DOUT_VLD">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="UART_0" PORT="DIN_VLD"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="FRAME_ERROR" SIGIS="undef"/>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+  </MODULES>
+
+</EDKSYSTEM>

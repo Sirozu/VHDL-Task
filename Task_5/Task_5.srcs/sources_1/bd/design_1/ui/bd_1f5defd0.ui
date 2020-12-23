@@ -1,0 +1,17 @@
+{
+   guistr: "# # String gsaved with Nlview 6.5.5  2015-06-26 bk=1.3371 VDI=38 GEI=35 GUI=JA:1.6
+#  -string -flagsOSRD
+preplace port UART_TXD -pg 1 -y 150 -defaultsOSRD
+preplace port RST -pg 1 -y 170 -defaultsOSRD
+preplace port CLK -pg 1 -y 150 -defaultsOSRD
+preplace port UART_RXD -pg 1 -y 190 -defaultsOSRD
+preplace inst UART_0 -pg 1 -lvl 1 -y 190 -defaultsOSRD
+preplace netloc UART_RXD_1 1 0 1 N
+preplace netloc UART_0_DOUT_VLD 1 0 2 10 100 230
+preplace netloc CLK_1 1 0 1 N
+preplace netloc UART_0_DOUT 1 0 2 0 80 240
+preplace netloc UART_0_UART_TXD 1 1 1 N
+preplace netloc RST_1 1 0 1 N
+levelinfo -pg 1 -20 120 260 -top 0 -bot 280
+",
+}
